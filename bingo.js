@@ -1,3 +1,4 @@
+// list of possible spaces
 var spaces = [
     "\"Is everyone here?\"",
     "*sound of phone ringing in the background*",
@@ -34,37 +35,42 @@ var spaces = [
     "Awkward pause as 2 people wait for each other to speak"
 ];
 
+// randomize the list of spaces
 spaces = spaces.sort(() => Math.random() - 0.5);
 
-for (var i = 0; i < 25; ++i) {
-    if (i != 12) addDiv("bingo-card", i, spaces[i]);
-    else addDiv("bingo-card", i, "FREE SPACE");
-}
+// create div elements for the first 12 spaces
+for (var i = 0; i < 12; ++i) { addDiv("bingo-card", i, "bingo-card__item", spaces[i]); }
+// the 12th space is the free space
+addDiv("bingo-card", i, "bingo-card__item active", "FREE SPACE");
+// create div elements for the last 12 spaces
+for (var i = 13; i < 25; ++i) { addDiv("bingo-card", i, "bingo-card__item", spaces[i]); }
 
-function addDiv(parent, id, innerText) {
+// create bingo card item
+function addDiv(parent, id, classList, innerText) {
     // and give it some content 
     var newItem = document.createElement("div");
-    newItem.classList = "bingo-card__item";
-    if (id == 12) {
-        newItem.classList += " active";
-    }
+    // set class
+    newItem.classList = classList;
+    // create text node for new item
     var newItemText = document.createTextNode(innerText);
     // add the text node to the newly created div
     newItem.appendChild(newItemText);
-    // add checkbox
+    // add check mark element to item
     var check = document.createElement("span");
     check.classList = "bingo-card__checkbox";
     newItem.appendChild(check);
-    // clickable
+    // make item toggle active class when clicked
     newItem.addEventListener("click", function() {
         this.classList.toggle("active");
     });
+    // set id
     newItem.id = "item" + id;
-    // add the newly created element and its content into the DOM 
+    // add the newly created element and its content into the DOM
     var currentDiv = document.getElementById(parent);
     currentDiv.appendChild(newItem, currentDiv);
 }
 
+// make sure content fits on the screen
 var maxWidth = $('#outer').width();
 var maxHeight = $('#outer').height();
 var $window = $(window);
@@ -90,11 +96,13 @@ if (width >= maxWidth && height >= maxHeight) {
     });
 }
 
+// if bingo card items are too wide, shrink the font size to 11
 if ($(".bingo-card__item").toArray().reduce((a, b) => b.clientWidth + a, 0) > 2900) {
     $(".bingo-card__item").toggleClass("shrink");
 }
 
 $(document).ready(function(e) {
+    // make sure content fits on the screen when window is resized
     $(window).resize(function(evt) {
         var $window = $(window);
         var width = $window.width();

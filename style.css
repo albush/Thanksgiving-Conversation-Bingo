@@ -119,33 +119,6 @@ div.bingo-card__item#item12 {
   height: 100%;
   opacity: 0.6;
 }
-
 .bingo-card__item {
   padding: 15px;
-}
-.bingo-card__item.active .bingo-card__checkbox:before {
-  content: "\2714";
-  position: absolute;
-  color: black;
-  left: 0;
-  top: -19px;
-  color: #78a6e0;
-  font: 30px "Caveat Brush", cursive;
-}
-.bingo-card__checkbox {
-  display: none;
-}
-
-.clear-button {
-  margin: 2em 0 0;
-  font: 700 16px 'Nunito', sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: inline-block;
-  border: 2px dotted;
-  color: #78a6e0;
-  padding: 8px 10px;
-}
-.clear-button:hover {
-  color: #f2ae00;
 }
