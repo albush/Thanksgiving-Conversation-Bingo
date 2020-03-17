@@ -1,3 +1,3 @@
 # corona-bingo
 
-Demo: http://lev.net/jonah/bingo/
+Demo: http://eyl327.mywebcommunity.org/bingo/

@@ -26,7 +26,12 @@ var spaces = [
     "There is a lag",
     "Teacher makes a joke",
     "Unexpected disconnection",
-    "Mention of Coronavirus"
+    "Mention of Coronavirus",
+    "*toilet flushes*",
+    "Teacher toggles between screens unnecessarily",
+    "Someone forgets they weren't on mute",
+    "Teacher wonders if people are still there",
+    "Awkward pause as 2 people wait for each other to speak"
 ];
 
 spaces = spaces.sort(() => Math.random() - 0.5);
