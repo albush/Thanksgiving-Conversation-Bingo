@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-image: url(coronavirus.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #4a2133;
+}
+
+/* Resize content to fit screen */
+#wrap {
+    position: relative;
+    width: 640px;
+    height: 400px;
+}
+#outer {
+    position: relative;
+    width: 640px;
+    height: 400px;
+    -webkit-transform-origin: top left;
+}
+
+@media screen and (max-width: 600px) {
+    #outer {
+        margin-left: -8px;
+    }
+}
+    
+.myCenter {
+  text-align: center;
+  margin: auto;
+  height:390px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+footer {
+  text-align: center;
+  margin: 3em auto;
+  width: 100%;
+}
+
+.main-content {
+  max-width: 600px;
+  width: 100%;
+  margin: 1em auto 0;
+  overflow: hidden;
+}
+
+.title {
+  background: #78a6e0;
+  color: #fff;
+  padding: 30px 10px;
+  grid-column: span 5;
+  text-align: center;
+  font: 72px/0.9 "Amatic SC", cursive;
+}
+.title span {
+  display: none;
+}
+.title span:nth-child(1) {
+  display: block;
+}
+
+.title.footer {
+    font: 14px/0.9 "Nunito", sans-serif;
+    padding: 8px;
+}
+
+.bingo-card {
+  background: #a8c6e2;
+  padding: 10px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows: repeat(5, 110px);
+  grid-template-columns: repeat(5, 1fr);
+  text-transform: uppercase;
+}
+.bingo-card__item {
+  background: #d9ecfd;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.35;
+  user-select: none;
+}
+.bingo-card__item.shrink {
+  font-size: 11px;
+}
+/* FREE SPACE */
+div.bingo-card__item#item12 {
+    font-size: 20px;
+}
+.bingo-card__item:after {
+  content: url(coronamarker.png);
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  color: #fb7d7d;
+  width: 100%;
+  opacity: 0;
+  transition: 0.1s ease;
+  height: 0;
+  pointer-events: none;
+  text-align: center;
+}
+.bingo-card__item.active:after {
+  height: 100%;
+  opacity: 0.6;
+}
+
+.bingo-card__item {
+  padding: 15px;
+}
+.bingo-card__item.active .bingo-card__checkbox:before {
+  content: "\2714";
+  position: absolute;
+  color: black;
+  left: 0;
+  top: -19px;
+  color: #78a6e0;
+  font: 30px "Caveat Brush", cursive;
+}
+.bingo-card__checkbox {
+  display: none;
+}
+
+.clear-button {
+  margin: 2em 0 0;
+  font: 700 16px 'Nunito', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  border: 2px dotted;
+  color: #78a6e0;
+  padding: 8px 10px;
+}
+.clear-button:hover {
+  color: #f2ae00;
+}
