@@ -1,4 +1,5 @@
 // list of possible spaces
+// list of possible spaces
 var spaces = [
     "\"Is everyone here?\"",
     "*sound of phone ringing in the background*",
@@ -32,7 +33,9 @@ var spaces = [
     "Teacher toggles between screens unnecessarily",
     "Someone forgets they weren't on mute",
     "Teacher wonders if people are still there",
-    "Awkward pause as 2 people wait for each other to speak"
+    "Awkward pause as 2 people wait for each other to speak",
+    "Teacher gets Whatsapp or text message on screen",
+    "Someone forgets their camera is on"
 ];
 
 // randomize the list of spaces
