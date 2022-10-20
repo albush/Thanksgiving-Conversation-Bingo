@@ -1,41 +1,42 @@
 // list of possible spaces
 // list of possible spaces
 var spaces = [
-    "\"Is everyone here?\"",
-    "*sound of phone ringing in the background*",
-    "The audio is cutting out.",
-    "\"Who are we missing?\"",
-    "*sneeze*",
-    "Student helps teacher use the software",
-    "Request for questions met with awkward silence",
-    "*coughing*",
-    "\"Can everyone see my screen?\"",
-    "*sound of children or pets in the background*",
-    "Someone is having connection issues",
-    "\"Can you repeat that?\"",
-    "\"Can we go back a slide?\"",
-    "Teacher has email open while sharing screen",
-    "\"Sorry, I was on mute.\"",
-    "\"Could everyone please go on mute?\"",
-    "Someone joins the class late.",
-    "Teacher asks question and gets no response",
-    "*sound of loud typing*",
-    "\"Let's move on\"",
-    "People talking at the same time",
-    "\"Can everyone hear me?\"",
-    "Teacher has technical difficulties",
-    "\"Will this class be recorded?\"",
-    "There is a lag",
-    "Teacher makes a joke",
-    "Unexpected disconnection",
-    "Mention of Coronavirus",
-    "*toilet flushes*",
-    "Teacher toggles between screens unnecessarily",
-    "Someone forgets they weren't on mute",
-    "Teacher wonders if people are still there",
-    "Awkward pause as 2 people wait for each other to speak",
-    "Teacher gets Whatsapp or text message on screen",
-    "Someone forgets their camera is on"
+    "\"Fake News\"",
+    "Casual Racism",
+    "Speculation of non-present relative's romantic life",
+    "\"Antifa\"",
+    "Tells Everyone They're A Vegan. Again.",
+    "Not-So Humble Brag",
+    "Humble Brag",
+    "Sex Life TMI",
+    "\"I'm so full- wait, is that pie?\"",
+    "Adult Stuck At The Kids Table",
+    "All Democrats ...",
+    "\"All Lives Matter\"",
+    "\"Oops, was I not supposed to tell everyone?\"",
+    "Mom Shaming",
+    "\"So... How about this weather?\"",
+    "\"When Are You Going To Get Married?\"",
+    "\"When Are You Going To Have Kids?\"",
+    "All Democrats ...",
+    "Multi-Level Marketing Pitch",
+    "Ignores Spouse All Day",
+    "\"I'm on the [Trendy Diet]\"",
+    "Casual Sexism",
+    "\"No disrespect but, [something disrespectufl]\"",
+    "Too Much Wine",
+    "\"Did You Mute Me On Facebook?\"",
+    "Family Wishes Your Ex Was Here",
+    "Couple in a Hushed Argument",
+    "Medical TMI",
+    "Hiding Outside to Avoid It All",
+    "Have I ever told you about the time ... (yep, every year)",
+    "Easily Debunked Consipiracy Theory",
+    "Passive Aggressive Pre-Meal Prayer",
+    "Won't Shut Up About CrossFit",
+    "Unsolicited Advice",
+    "Not a sports guy trying to talk football with the guys",
+    "On mobile phone all day, doesn't talk to anyone"
 ];
 
 // randomize the list of spaces
@@ -43,8 +44,8 @@ spaces = spaces.sort(() => Math.random() - 0.5);
 
 // create div elements for the first 12 spaces
 for (var i = 0; i < 12; ++i) { addDiv("bingo-card", i, "bingo-card__item", spaces[i]); }
-// the 12th space is the free space
-addDiv("bingo-card", i, "bingo-card__item active", "FREE SPACE");
+// the 12th space is the TRUMP (FREE SPACE)
+addDiv("bingo-card", i, "bingo-card__item active", "TRUMP (FREE SPACE)");
 // create div elements for the last 12 spaces
 for (var i = 13; i < 25; ++i) { addDiv("bingo-card", i, "bingo-card__item", spaces[i]); }
 

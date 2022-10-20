@@ -4,12 +4,17 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  background-image: url(coronavirus.jpg);
+  background-image: url(tdaydinner.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #4a2133;
+}
+
+a {
+  color: #fff;
+
 }
 
 /* Resize content to fit screen */
@@ -55,7 +60,7 @@ footer {
 }
 
 .title {
-  background: #78a6e0;
+  background: #C04F17;
   color: #fff;
   padding: 30px 10px;
   grid-column: span 5;
@@ -98,12 +103,12 @@ footer {
 .bingo-card__item.shrink {
   font-size: 11px;
 }
-/* FREE SPACE */
+/* TRUMP (FREE SPACE) */
 div.bingo-card__item#item12 {
     font-size: 20px;
 }
 .bingo-card__item:after {
-  content: url(coronamarker.png);
+  content: url(turkeymarker.png);
   position: absolute;
   top: 8px;
   left: 0px;
